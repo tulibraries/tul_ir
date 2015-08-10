@@ -12,6 +12,10 @@ Masthead overrides
 	background: $temple-cherry;
 }
 
+#masthead .institution_name{
+	font-size: 30px;
+}
+
 #masthead_controls .navbar-default .navbar-nav > .active > a,
 #masthead_controls .navbar-default .navbar-nav > .active > a:hover,
 #masthead_controls .navbar-default .navbar-nav > .active > a:focus {
