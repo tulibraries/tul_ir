@@ -3,12 +3,31 @@
 /*****
 *
 *
-Main body styles
+Masthead overrides
 *
 *
 *****/
 
 #masthead{
 	background: $temple-cherry;
+}
+
+#masthead_controls .navbar-default .navbar-nav > .active > a,
+#masthead_controls .navbar-default .navbar-nav > .active > a:hover,
+#masthead_controls .navbar-default .navbar-nav > .active > a:focus {
+	background-color: $temple-light-grey;
+}
+
+
+#masthead_controls {
+  background-color: $temple-light-grey;
+  .navbar {
+    color: $temple-black;
+    background-color: $temple-light-grey;
+    a:link, a:visited {
+      background-color: $temple-light-grey;
+      color: $temple-black;
+    }
+  }
 }
 
