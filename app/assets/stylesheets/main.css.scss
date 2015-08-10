@@ -20,18 +20,79 @@ Masthead overrides
 #masthead_controls .navbar-default .navbar-nav > .active > a:hover,
 #masthead_controls .navbar-default .navbar-nav > .active > a:focus {
 	background-color: $temple-light-grey;
+	color: $temple-black;
 }
 
-
 #masthead_controls {
+  border-top: 1px solid $temple-dark-grey;
+  border-bottom: 1px solid $temple-dark-grey;
   background-color: $temple-light-grey;
   .navbar {
     color: $temple-black;
     background-color: $temple-light-grey;
+    li {
+      border-right: 2px solid $temple-dark-grey;
+    }
+    li:first-child {
+      border-left: 2px solid $temple-dark-grey;
+      color: $temple-black;
+    }
     a:link, a:visited {
       background-color: $temple-light-grey;
       color: $temple-black;
+      font-size: 14px;
+    }
+    a:hover {
+      background-color: $temple-black;
+      color: $temple-white;
     }
   }
 }
+
+#masthead {
+	padding-top:20px;
+}
+
+
+
+/*****
+*
+*
+* Footer
+*
+*
+*****/
+
+#footer{
+	background:$temple-black;
+	color: $temple-white;
+}
+
+
+
+
+/*****
+*
+*
+* Homepage
+*
+*
+*****/
+
+.add, .btn-primary{
+	border-color: $temple-dark-cherry;
+	background: $temple-cherry;
+	color: $temple-white;
+}
+
+.add:hover, .add:focus,
+.btn-primary:hover, .btn-primary:focus {
+	border-color: $temple-cherry;
+    background: $temple-white;
+    color: $temple-cherry;
+}
+
+
+
+
 
