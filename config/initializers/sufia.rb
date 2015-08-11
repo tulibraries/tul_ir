@@ -4,6 +4,8 @@ Sufia.config do |config|
     file_author: :creator
   }
 
+ 
+  config.application_name = "Temple Libraries Institutional Repository"
   config.max_days_between_audits = 7
 
   config.max_notifications_for_dashboard = 5
