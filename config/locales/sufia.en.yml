@@ -4,5 +4,4 @@ en:
     institution_name:   "Temple Libraries"
     institution_name_full: "Temple University Libraries"
     sort_label: "Sort the listing of items"
-
-
+    collection_blurb: "Blurb explaining what collections are"
