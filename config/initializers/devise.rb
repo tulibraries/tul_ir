@@ -99,7 +99,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
+<<<<<<< HEAD
   # config.pepper = 'eb0b76f77d7ad0946a802fca33533260ecdf2cd286040de47a7a3c1aceb0bc1010eb7de95ce0b6cda6bfd09eec91ef5325cc7bb7d46e51f053e070f1f575aa49'
+=======
+  # config.pepper = 'ff356b4ba2a74dbc4ba50d898550a7a56d8b3482ea022641cafd2a3f1e053542034894b2f5538163b7333cbb3ce3a96e8db33d87b7d302750a43d429a78c79c8'
+>>>>>>> 2d116d3ed5e14022475217c50b7a3e1633149df2
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -154,6 +158,12 @@ Devise.setup do |config|
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
 
+<<<<<<< HEAD
+=======
+  # If true, expires auth token on session timeout.
+  # config.expire_auth_token_on_timeout = false
+
+>>>>>>> 2d116d3ed5e14022475217c50b7a3e1633149df2
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
   # :failed_attempts = Locks an account after a number of failed attempts to sign in.
