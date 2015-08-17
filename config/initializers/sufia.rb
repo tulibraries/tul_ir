@@ -4,7 +4,6 @@ Sufia.config do |config|
     file_author: :creator
   }
 
- 
   config.application_name = "Temple Libraries Institutional Repository"
   config.max_days_between_audits = 7
 
@@ -44,7 +43,7 @@ Sufia.config do |config|
     "Research Paper" => "Research Paper",
     "Software or Program Code" => "Software or Program Code",
     "Video" => "Video",
-    "Other" => "Other",
+    "Other" => "Other"
   }
 
   config.resource_types_to_schema = {
@@ -67,11 +66,11 @@ Sufia.config do |config|
     "Research Paper" => "http://schema.org/ScholarlyArticle",
     "Software or Program Code" => "http://schema.org/Code",
     "Video" => "http://schema.org/VideoObject",
-    "Other" => "http://schema.org/CreativeWork",
+    "Other" => "http://schema.org/CreativeWork"
   }
 
   config.permission_levels = {
-    "Choose Access"=>"none",
+    "Choose Access" => "none",
     "View/Download" => "read",
     "Edit" => "edit"
   }
@@ -109,6 +108,13 @@ Sufia.config do |config|
   # Specify a different template for your repository's NOID IDs
   # config.noid_template = ".reeddeeddk"
 
+  # Store identifier minter's state in a file for later replayability
+  # config.minter_statefile = '/tmp/minter-state'
+
+  # Process for translating Fedora URIs to identifiers and vice versa
+  # config.translate_uri_to_id = ActiveFedora::Noid.config.translate_uri_to_id
+  # config.translate_id_to_uri = ActiveFedora::Noid.config.translate_id_to_uri
+
   # Specify the prefix for Redis keys:
   # config.redis_namespace = "sufia"
 
@@ -137,7 +143,6 @@ Sufia.config do |config|
   rescue Errno::ENOENT
     config.browse_everything = nil
   end
-
 end
 
 Date::DATE_FORMATS[:standard] = "%m/%d/%Y"

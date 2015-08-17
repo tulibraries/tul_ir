@@ -34,7 +34,7 @@ class CatalogController < ApplicationController
           config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
           config.show.partials.insert(1, :openseadragon)
 
-    #Show gallery view
+    # Show gallery view
     config.view.gallery.partials = [:index_header, :index]
     config.view.slideshow.partials = [:index]
 
@@ -125,7 +125,7 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
     config.add_search_field('all_fields', label: 'All Fields', include_in_advanced_search: false) do |field|
-      all_names = config.show_fields.values.map{|val| val.field}.join(" ")
+      all_names = config.show_fields.values.map(&:field).join(" ")
       title_name = solr_name("title", :stored_searchable)
       field.solr_parameters = {
         qf: "#{all_names} file_format_tesim all_text_timv",
@@ -318,5 +318,4 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 end
