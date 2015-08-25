@@ -16,10 +16,8 @@
 !/log/.keep
 /tmp
 
-<<<<<<< HEAD
-#Ignore jetty
-=======
-<<<<<<< HEAD
 # Ignore jetty
->>>>>>> 8887abe069c8b6f1bfbdca3473c626a875ec1c82
 /jetty
+
+# Ignore dump file
+dump.rdb
