@@ -31,11 +31,9 @@ module Sufia
         property :contributor, predicate: ::RDF::DC.contributor do |index|
           index.as :stored_searchable, :facetable
         end
-
         property :department, predicate: ::RDF::URI.new("http://repository.temple.edu/ns/department") do |index|
           index.as :stored_searchable, :facetable
         end
-
         property :description, predicate: ::RDF::DC.description do |index|
           index.type :text
           index.as :stored_searchable
