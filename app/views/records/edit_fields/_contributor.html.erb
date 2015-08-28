@@ -1,0 +1,6 @@
+<% if f.object.class.multiple? key %>
+  <%= f.input :contributor, as: :multi_value_with_help, required: false %>
+<% else %>
+  <%= f.input :contributor, as: :text %>
+<% end %>
+<%= content_tag(:div, t('simple_form.metadata_help.generic_file.contributor_html').html_safe, :class => "help-block") %>

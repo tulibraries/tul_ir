@@ -1,0 +1,6 @@
+<% if f.object.class.multiple? key %>
+  <%= f.input :date_created, as: :multi_value_with_help, required: false %>
+<% else %>
+  <%= f.input :date_created, as: :text %>
+<% end %>
+<%= content_tag(:div, t('simple_form.metadata_help.generic_file.date_created').html_safe, :class => "help-block") %>

@@ -3,6 +3,5 @@
   <% (f.object.terms - [:title, :creator, :rights, :tag, :resource_type]).each do |term| %>
     <%# <%= f.input term, as: :multi_value_with_help, input_html: { required: false} %>
     <%= render_edit_field_partial(term, f: f) %>
-    <%= term %>
   <% end %>
 </div> <!-- /more_descriptions -->
