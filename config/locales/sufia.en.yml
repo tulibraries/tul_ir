@@ -5,3 +5,10 @@ en:
     institution_name_full: "Temple University Libraries"
     sort_label: "Sort the listing of items"
     collection_blurb: "Blurb explaining what collections are"
+  simple_form:
+    labels:
+      generic_file:
+        department:       "Department"
+    metadata_help:
+      generic_file:
+        department: "School or Department associated with this object"

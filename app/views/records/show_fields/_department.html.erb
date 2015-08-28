@@ -1,0 +1,6 @@
+<% record.department.each do |bn| %>
+  <span itemprop="contentLocation" itemscope itemtype="http://schema.org/location">
+    <span itemprop="name"><%= link_to_facet(bn, Solrizer.solr_name("department", :facetable)) %></span>
+  </span>
+  <br />
+<% end %>
