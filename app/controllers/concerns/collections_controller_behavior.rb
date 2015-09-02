@@ -49,7 +49,7 @@ module Sufia
           params.require(:collection).permit(:title, :description, :members, part_of: [],
                                                                              contributor: [], creator: [], department: []publisher: [], date_created: [], subject: [],
                                                                              language: [], rights: [], resource_type: [], identifier: [], based_near: [],
-                                                                             tag: [], related_url: [])
+                                                                             tag: [], related_url: [], notes_about_file: [])
         )
       end
 

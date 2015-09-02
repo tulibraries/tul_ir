@@ -4,7 +4,7 @@ module Sufia
     self.model_class = ::GenericFile
     # Terms is the list of fields displayed by app/views/generic_files/_show_descriptions.html.erb
     self.terms = [:resource_type, :title, :creator, :contributor, :department, :description, :tag, :rights,
-                  :publisher, :date_created, :subject, :language, :identifier, :based_near, :related_url]
+                  :publisher, :date_created, :subject, :language, :identifier, :based_near, :related_url, :notes_about_file]
 
     # Depositor and permissions are not displayed in app/views/generic_files/_show_descriptions.html.erb
     # so don't include them in `terms'.
