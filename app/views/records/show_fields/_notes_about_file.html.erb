@@ -1,0 +1,6 @@
+<% record.notes_about_file.each do |bn| %>
+  <span itemprop="contentLocation" itemscope itemtype="http://repository.temple.edu/ns/notes_about_file">
+    <span itemprop="name"><%= link_to_facet(bn, Solrizer.solr_name("notes_about_file", :facetable)) %></span>
+  </span>
+  <br />
+<% end %>

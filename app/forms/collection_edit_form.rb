@@ -4,7 +4,7 @@ module Sufia
       include HydraEditor::Form
       self.model_class = ::Collection
       self.terms = [:resource_type, :title, :creator, :contributor, :department, :description, :tag, :rights,
-                    :publisher, :date_created, :subject, :language, :identifier, :based_near, :related_url]
+                    :publisher, :date_created, :subject, :language, :identifier, :based_near, :related_url, :notes_about_file]
 
       # Test to see if the given field is required
       # @param [Symbol] key a field

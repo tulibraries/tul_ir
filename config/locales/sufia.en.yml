@@ -9,6 +9,8 @@ en:
     labels:
       generic_file:
         department:       "Department"
+        notes_about_file:       "Notes About File"
     metadata_help:
       generic_file:
         department: "School or Department associated with this object"
+        notes_about_file: "Additional information about the file associated with this object"

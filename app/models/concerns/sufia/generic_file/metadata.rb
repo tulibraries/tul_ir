@@ -86,6 +86,9 @@ module Sufia
         property :source, predicate: ::RDF::DC.source do |index|
           index.as :stored_searchable
         end
+        property :notes_about_file, predicate: ::RDF::URI.new("http://repository.temple.edu/ns/notes_about_file") do |index|
+          index.as :stored_searchable
+        end
 
         # TODO: Move this somewhere more appropriate
         begin
