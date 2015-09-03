@@ -1,0 +1,5 @@
+<% if f.object.class.multiple? key %>
+  <%= f.input :department, as: :multi_value_with_help, input_html: { class: 'form-control' }, required: true %>
+<% else %>
+  <%= f.input :department, required: true %>
+<% end %>

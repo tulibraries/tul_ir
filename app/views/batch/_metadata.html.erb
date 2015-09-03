@@ -36,9 +36,6 @@
       <%= f.input :creator, as: :multi_value_with_help %>
       <%= content_tag :div, t('simple_form.metadata_help.generic_file.creator_html').html_safe, :class => "help-block" %>
 
-      <%= f.input :department, as: :multi_value_with_help %>
-      <%= content_tag :div, t('simple_form.metadata_help.generic_file.department').html_safe, :class => "help-block" %>
-
       <%= f.input :rights, as: :select_with_modal_help, collection: Sufia.config.cc_licenses,
           input_html: { class: 'form-control', multiple: true } %>
 
