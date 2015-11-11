@@ -1,12 +1,23 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  # ==> LDAP Configuration 
+  config.ldap_logger = true
+  config.ldap_create_user = true
+  config.ldap_config = "#{Rails.root}/config/ldap.yml"
+  # config.ldap_update_password = true
+  # config.ldap_check_group_membership = false
+  # config.ldap_check_group_membership_without_admin = false
+  # config.ldap_check_attributes = false
+  # config.ldap_use_admin_to_bind = false
+  # config.ldap_ad_group_check = false
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '2712d1f88fdc3c64c9f4008c1ad648197e76dbbf09f31cdd2b176c3acf697b16ee92dc340cab7c2905acfbb1440dcd2fd906b742ed636cbf2d57feaf1a330155'
+  # config.secret_key = '12f7eb50cab50d4481c680b24a7309c807f5a40635ede01e036117af533fcc65d7992a3877d459ac82e67c600a4e7abd85c891821e748ea3262d757de6bc0b13'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -31,7 +42,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [:email]
+  config.authentication_keys = [:email]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -99,7 +110,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'e96c84847f4b42ab02906618824ae569d41b3153effc84cb3af3ae753e89a0915165e40700167975b7c593b8e00e23f45282b86dcf318a3282027a79be7945b8'
+  # config.pepper = '9900a0a54cf3737605d5fc3f7b83ac4fbe00a88506f0ddce4f600d17c7c976cc694d040f879545ca94c80836fbff4971465877220fcbe2bf82576be30ad0ddd1'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -230,7 +241,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
