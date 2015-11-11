@@ -237,6 +237,9 @@ GEM
       hydra-access-controls (= 9.2.2)
       hydra-core (= 9.2.2)
       rails (>= 3.2.6)
+    hydra-ldap (0.1.0)
+      net-ldap
+      rails
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -318,6 +321,7 @@ GEM
     nest (1.1.2)
       redis
     net-http-persistent (2.9.4)
+    net-ldap (0.12.0)
     noid (0.8.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -611,6 +615,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   devise-guests (~> 0.3)
+  hydra-ldap
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
