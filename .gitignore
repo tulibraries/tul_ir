@@ -21,3 +21,6 @@
 
 # Ignore dump file
 dump.rdb
+
+#Ignore ldap config
+/config/hydra-ldap.yml
