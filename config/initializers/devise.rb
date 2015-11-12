@@ -17,13 +17,14 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '12f7eb50cab50d4481c680b24a7309c807f5a40635ede01e036117af533fcc65d7992a3877d459ac82e67c600a4e7abd85c891821e748ea3262d757de6bc0b13'
+  # config.secret_key = '9139f342dbb3b5e264c7156083be7878f567b9bd1617e1d1f62703a2c75bd160926d475df6e8b52cc55e139bc5f8dd256835292c92213228078404ada1263692'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -41,7 +42,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  config.authentication_keys = [:email]
+  # config.authentication_keys = [:email]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -109,7 +110,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '9900a0a54cf3737605d5fc3f7b83ac4fbe00a88506f0ddce4f600d17c7c976cc694d040f879545ca94c80836fbff4971465877220fcbe2bf82576be30ad0ddd1'
+  # config.pepper = 'f0a02b12c73dd923ad5b88ca22f93930dbb6aaee2f6f2361c4cd793fefdac1debc353839409fbf442cd4f0be01dcdec209d2e487da6f440946706f705967f5d6'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

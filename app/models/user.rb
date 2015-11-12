@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :ldap_authenticatable
+  devise :ldap_authenticatable, :ldap_authenticatable,
+         :recoverable, :rememberable, :trackable, :validatable
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+
   # Connects this user object to Hydra behaviors.
   include Hydra::User# Connects this user object to Sufia behaviors. 
  include Sufia::User
@@ -25,7 +29,5 @@ class User < ActiveRecord::Base
     email
   end
 
-  def ldap_before_save
-    self.email = Devise::LDAP::Adapter.get_ldap_param(self.username,"mail").first
-  end
+  
 end
