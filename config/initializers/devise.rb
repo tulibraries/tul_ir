@@ -5,12 +5,12 @@ Devise.setup do |config|
   config.ldap_logger = true
   config.ldap_create_user = true
   config.ldap_config = "#{Rails.root}/config/ldap.yml"
-  # config.ldap_update_password = true
+  config.ldap_update_password = false
   # config.ldap_check_group_membership = false
   # config.ldap_check_group_membership_without_admin = false
-  # config.ldap_check_attributes = false
-  # config.ldap_use_admin_to_bind = false
-  # config.ldap_ad_group_check = false
+  config.ldap_check_attributes = false
+  config.ldap_use_admin_to_bind = true
+  config.ldap_ad_group_check = false
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
@@ -24,7 +24,6 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

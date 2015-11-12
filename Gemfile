@@ -17,6 +17,9 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'sufia', '6.3.0'
 gem 'kaminari', github: 'jcoyne/kaminari', branch: 'sufia'  # required to handle pagination properly in dashboard. See https://github.com/amatsuda/kaminari/pull/322
+
+gem 'net-ldap', '~> 0.6.0'
+
 gem "devise_ldap_authenticatable"
 
 # Use jquery as the JavaScript library
