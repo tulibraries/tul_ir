@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :ldap_authenticatable
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+
   # Connects this user object to Hydra behaviors.
   include Hydra::User# Connects this user object to Sufia behaviors. 
  include Sufia::User
@@ -14,8 +20,6 @@ class User < ActiveRecord::Base
   include Blacklight::User
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 
   # Method added by Blacklight; Blacklight uses #to_s on your
   # user class to get a user-displayable login/identifier for
@@ -23,4 +27,6 @@ class User < ActiveRecord::Base
   def to_s
     email
   end
+
+  
 end

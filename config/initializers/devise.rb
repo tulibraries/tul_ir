@@ -1,12 +1,23 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  # ==> LDAP Configuration 
+  config.ldap_logger = true
+  config.ldap_create_user = true
+  config.ldap_config = "#{Rails.root}/config/ldap.yml"
+  config.ldap_update_password = false
+  # config.ldap_check_group_membership = false
+  # config.ldap_check_group_membership_without_admin = false
+  config.ldap_check_attributes = false
+  config.ldap_use_admin_to_bind = true
+  config.ldap_ad_group_check = false
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '2712d1f88fdc3c64c9f4008c1ad648197e76dbbf09f31cdd2b176c3acf697b16ee92dc340cab7c2905acfbb1440dcd2fd906b742ed636cbf2d57feaf1a330155'
+  # config.secret_key = '9139f342dbb3b5e264c7156083be7878f567b9bd1617e1d1f62703a2c75bd160926d475df6e8b52cc55e139bc5f8dd256835292c92213228078404ada1263692'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -99,7 +110,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'e96c84847f4b42ab02906618824ae569d41b3153effc84cb3af3ae753e89a0915165e40700167975b7c593b8e00e23f45282b86dcf318a3282027a79be7945b8'
+  # config.pepper = 'f0a02b12c73dd923ad5b88ca22f93930dbb6aaee2f6f2361c4cd793fefdac1debc353839409fbf442cd4f0be01dcdec209d2e487da6f440946706f705967f5d6'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -230,7 +241,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
