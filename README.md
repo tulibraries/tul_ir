@@ -1,10 +1,10 @@
-=TUL_IR
+#TUL_IR
 
 TUL_IR is the Temple University Libraries' version of Sufia, a lightly-customized version intended for use as a repository with LDAP authentication and some light front-end customizations.  
 
 See the [documentation for Sufia](https://github.com/projecthydra/sufia) for information on getting all of the required pieces working.
 
-==Additional Requirement
+##Additional Requirement
 
 For use with LDAP, this Hydra application also requires the following packages to be installed on the server:
 * ldap-utils
@@ -15,7 +15,7 @@ The following packages are useful for testing LDAP bind credentials and getting 
 * ldapwhoami
 * ldapsearch
 
-==Installation
+##Installation
 
 To install and set up with correctly generated databases, run the following:
 
