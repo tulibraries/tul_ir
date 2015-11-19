@@ -1,14 +1,20 @@
-<h2>Log in with your Temple Accessnet ID</h2>
+<h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "Temple University Email Address" %><br />
     <%= f.email_field :email, autofocus: true %>
+  </div>
+  <div class="field-tip">
+    Example: tua99999@temple.edu
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Email Password" %><br />
     <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+  <div class="field-tip">
+    Temple Accessnet password
   </div>
 
   <% if devise_mapping.rememberable? -%>
