@@ -7,8 +7,12 @@ class User < ActiveRecord::Base
 
   # Connects this user object to Hydra behaviors.
   include Hydra::User# Connects this user object to Sufia behaviors. 
- include Sufia::User
+  include Sufia::User
   include Sufia::UserUsageStats
+
+  before_save do
+    self.display_name = Devise::LDAP::Adapter.get_ldap_param(self.email,"cn").first
+  end
 
 
 
